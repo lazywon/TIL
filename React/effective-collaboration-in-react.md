@@ -26,10 +26,11 @@
 
 ### 리액트 코딩 컨벤션
 
-- ESLint, Prettier 포맷터 적용을 통해 코드 스타일 통일
+- ESLint, Prettier 포맷터 자동 적용을 통해 코드 스타일 및 포맷 통일
 - 네이밍 컨벤션
   - component: PascalCase
   - non-component: camelCase
+  - 속성 (className, onClick..): camelCase
   - unit tests: 파일명과 동일하게
 - 함수 선언 방식 통일
   - 함수 선언문
@@ -76,10 +77,44 @@
 
 ### 의존성 패키지 설치
 
-- package.json - 의존성 패키지 버전을 range로 관리. yarn install 시 팀원 간 서로 다른 버전의 패키지 설치할 가능성 있음.
-- yarn.lock - 정확한 버전 명시
-- 패키지 설치 시 yarn install 보다는 아래 명령어 이용하여 lock 파일을 통해 정확한 버전의 의존성 패키지 설치하도록 하기
+- package.json
 
-  ```shell
-  yarn install --immutable --immutable-cache --check-cache
+  - 설치하려는 모듈에 대한 의존성 목록을 갖는다.
+  - 의존성 패키지 버전을 `range`로 관리.
+
+  ```json
+  "react": "^17.0.2",      // ^, ~, <=
   ```
+
+  - `yarn install` 시 팀원끼리 서로 다른 버전의 node_modules를 생성할 수 있음. 즉, `yarn install` 혹은 `npm install` 을 실행하면 서로 다른 버전을 가지는 모듈을 가지는 경우가 생길 수 있다.
+
+- yarn.lock
+
+  - npm을 사용하는 경우, package-lock.json 파일이 생성됨.
+  - 위 문제 해결을 위해 해당 파일이 존재한다.
+  - 정확한 버전이 명시되어 있어 package.json을 기준으로 설치할때 보다 정확한 의존성 모듈을 설치할 수 있다.
+
+  ```json
+  react@^17.0.2:
+  version "17.0.2"
+  ```
+
+  - 이러한 이유로 package-lock.json, yarn.lock을 git에 커밋해 두어야 한다.
+  - 전체를 대상으로 install하며 개별적으로는 불가능
+  - 명령어 실행 시 lock 파일이 무조건 존재해야하고 만약 없으면 에러를 뱉는다.
+  - 이미 node_modules가 존재하는 경우 명령어 실행 전에 node_modules를 지우고 실행해야 함
+
+  - 패키지 설치 시 `yarn install` 보다는 아래 명령어 이용하여 lock 파일을 통해 정확한 버전의 의존성 패키지 설치하도록 하기
+
+    ```shell
+    yarn install --immutable --immutable-cache --check-cache
+    ```
+
+  - npm의 경우
+    ```shell
+    npm ci
+    ```
+  - `npm install`의 경우 packag.json과 package-lock.json에 쓰기 권한을 갖지만 npm ci 는 없다. 오직 lock파일을 읽고 의존성 목록을 설치하기 때문에 쓰기 권한이 없는 것.
+  - 그래서 개발 환경이 아닌 CI 환경에서는 npm install 보다는 적합한 방안으로 여겨진다.
+
+- package-lock.json 파일을 기반으로 의존성을 설치하고, package.json 은 버전 매칭 용도로 사용
