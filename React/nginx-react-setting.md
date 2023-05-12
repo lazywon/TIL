@@ -1,6 +1,6 @@
 # FE Settings
 
-### FE 개발 정책
+### FE 개발 스택
 
 - React.js + Typescript (CRA 사용)
 - style: PostCSS
