@@ -1,5 +1,20 @@
 # FE Settings
 
+### FE 개발 정책
+
+- React.js + Typescript (CRA 사용)
+- style: PostCSS
+- JS 패키지 매니저: yarn
+- 컴포넌트 선언 방식: 함수형 컴포넌트
+- 전역 상태 관리
+  - ContextAPI
+- 데이터 페칭 관련 라이브러리
+  - react-query
+  - graphQL?
+- ESLint + Prettier 설정
+  - airbnb 컨벤션 참고
+- 테스트: Jest
+
 ## React 프로젝트 세팅
 
 - 사전에 설치 작업

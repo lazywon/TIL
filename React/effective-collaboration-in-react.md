@@ -3,7 +3,14 @@
 ### git 정책
 
 - git-flow 브랜칭 전략 정하기
+  - 브랜치 (master - develop - feature)
+    - master - 운영 서버에 배포된 소스 관리
+    - develop - 개발 서버에 배포된 소스 관리
+    - feature - 지라 이슈 단위
 - 커밋 컨벤션
+  - commit 메시지 컨벤션 참고
+    - [좋은 git commit 메시지를 위한 영어 사전](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
+    - [GIT](https://danalfintech.atlassian.net/wiki/spaces/R/pages/169148429)
 
 ### 버전 통일
 
