@@ -93,6 +93,41 @@
     }
     ```
 
+* 라이브러리 설치
+
+  - jest
+
+    ```shell
+    # typescript 지원
+    $ yarn add -D jest @types/jest ts-jest typescript
+
+    # javascript 지원
+    $ yarn add -D jest @types/jest
+    ```
+
+    - jest : javascript 테스트 프레임워크
+    - @types/jest : jest의 타입 정의를 포함하고 있는 라이브러리
+    - ts-jest : typescript로 작성된 프로젝트들을 테스트 할 수 있게 해주는 typescript 전처리 라이브러리
+    - jest.config.js 설정
+      ```
+      module.exports = {
+          // ts-jest 사용
+          preset: 'ts-jest',
+          // node.js 환경에서 테스트 실행하도록 지정
+          testEnvironment: 'node',
+      }
+      ```
+    - tsconfig.json 설정
+
+      ```
+      {
+          "compilerOptions": {
+              "outDir": "dist",
+              "esMolduleInterop": true
+          }
+      }
+      ```
+
 - 크롬 익스텐션 설치
   - react developer tools
 
