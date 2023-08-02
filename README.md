@@ -23,3 +23,4 @@
 ## Spring
 
 - [스프링 개념 정리](https://github.com/lazywon/TIL/blob/main/Spring/spring-concept.md)
+- [스프링부트 프로젝트 구조와 용어 정리](https://github.com/lazywon/TIL/blob/main/Spring/spring-boot-project-structure.md)
