@@ -130,7 +130,10 @@ class CommonDB:
             self.session.rollback()
         except SQLAlchemyError as e:
             raise e
-# example
+```
+
+```python
+# 사용 예제
 try:
     BIND = current_app.config["SQLALCHEMY_BINDS"]["TEST"]
     db = CommonDB(BIND)
@@ -148,11 +151,11 @@ except Exception as e:
 
 finally:
     db.close()
-
 ```
 
-- 위 CommonDB를 이용하면 여러 종류의 데이터베이스 드라이버를 사용하는 데에도 문제가 없다.
-- `SQLALCHEMY_BINDS` 설정에 원하는 드라이버를 추가하고 CommonDB 클래스를 사용할 때 해당 드라이버를 지정하면 됨.
+- 기존에 close() 하는 코드가 try 블록 내에 있었던 것을 finally로 빼내어 commit, rollback 처리 이후 예외가 발생하더라도 데이터베이스 연결을 확실히 종료하도록 변경
+  - 예외 발생 시 데이터베이스 연결이 종료되지 않는다면 데이터베이스 리소스가 계속해서 낭비되는 상황이 발생할 수 있다.
+- 위 CommonDB를 이용하면 여러 종류의 데이터베이스 드라이버를 사용하는 데에도 문제가 없다. `SQLALCHEMY_BINDS` 설정에 원하는 드라이버를 추가하고 CommonDB 클래스를 사용할 때 해당 드라이버를 지정하면 된다.
 
 ## 결론
 
