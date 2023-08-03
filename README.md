@@ -12,6 +12,7 @@
 
 - [Flask Session을 이용한 동시 접속 제한](https://github.com/lazywon/TIL/blob/main/Flask/flask-session.md)
 - [Flask SQLAlchemy Lost Connection 에러 트러블 슈팅](https://github.com/lazywon/TIL/blob/main/Flask/flask-sqlalchemy.md)
+- [Flask에서 데이터베이스 연동하기](https://github.com/lazywon/TIL/blob/main/Flask/flask-db-connection.md)
 
 ## React
 
