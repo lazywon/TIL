@@ -14,6 +14,14 @@
 - [Flask SQLAlchemy Lost Connection 에러 트러블 슈팅](https://github.com/lazywon/TIL/blob/main/Flask/flask-sqlalchemy.md)
 - [Flask에서 데이터베이스 연동하기](https://github.com/lazywon/TIL/blob/main/Flask/flask-db-connection.md)
 
+## JavaScript
+
+- [Javascript HTTP 요청 방식](https://github.com/lazywon/TIL/blob/main/JavaScript/http-request.md)
+
+## Nginx
+
+- [Nginx 보안 취약점 조치 - 서버 정보 숨기기](https://github.com/lazywon/TIL/blob/main/Nginx/security-settings.md)
+
 ## React
 
 - [효과적인 FE 협업을 위한 준비](https://github.com/lazywon/TIL/blob/main/React/effective-collaboration-in-react.md)
