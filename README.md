@@ -4,6 +4,10 @@
 
 - [Apache MPM 모듈](https://github.com/lazywon/TIL/blob/main/Apache/mpm-module.md)
 
+## CS
+
+- [SOLID 원칙](https://github.com/lazywon/TIL/blob/main/CS/SOLID.md)
+
 ## Docker
 
 - [Docker 기초 개념](https://github.com/lazywon/TIL/blob/main/Docker/about-docker.md)
