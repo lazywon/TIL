@@ -7,6 +7,7 @@
 ## CS
 
 - [SOLID 원칙](https://github.com/lazywon/TIL/blob/main/CS/SOLID.md)
+- [네트워크 기초 정리](https://github.com/lazywon/TIL/blob/main/CS/network-basic.md)
 
 ## Docker
 
@@ -25,6 +26,10 @@
 ## Nginx
 
 - [Nginx 보안 취약점 조치 - 서버 정보 숨기기](https://github.com/lazywon/TIL/blob/main/Nginx/security-settings.md)
+
+## Python
+
+- [파이썬 문자 인코딩](https://github.com/lazywon/TIL/blob/main/Python/python-encoding.md)
 
 ## React
 
