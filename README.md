@@ -21,7 +21,7 @@
 
 ## FrontEnd
 
-- [D모바일에서 <input> 태그를 이용하여 키패드 설정하기](https://github.com/lazywon/TIL/blob/main/FrontEnd/mobile-keypad-handle.md)
+- [모바일에서 <input> 태그를 이용하여 키패드 설정하기](https://github.com/lazywon/TIL/blob/main/FrontEnd/mobile-keypad-handle.md)
 
 ## JavaScript
 
