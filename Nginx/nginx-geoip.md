@@ -58,7 +58,7 @@ mmdblookup --file ./GeoLite2_Country.mmdb --ip <조회할 IP> country iso_code
 
 ## custom image 이용한 컨테이너 구동 절차
 
-- 기존 `ginxinc/nginx-unprivileged` 이미지에서 geoip 추가한 새로운 커스텀 이미지 생성
+- 기존 `nginxinc/nginx-unprivileged` 이미지에서 geoip 추가한 새로운 커스텀 이미지 생성
 
 ### custom docker image 생성
 
