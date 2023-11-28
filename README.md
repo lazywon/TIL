@@ -30,6 +30,7 @@
 ## Nginx
 
 - [Nginx 보안 취약점 조치 - 서버 정보 숨기기](https://github.com/lazywon/TIL/blob/main/Nginx/security-settings.md)
+- [Nginx GeoIP 이용한 IP 주소 접근 차단](https://github.com/lazywon/TIL/blob/main/Nginx/nginx-geoip.md)
 
 ## Python
 
